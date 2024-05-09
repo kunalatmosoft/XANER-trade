@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Stock Market Dashboard</h1>
+        <button id="nightModeButton">Night Mode</button>
+    </header>
+    <main id="container">
+        <aside>
+            <h2>Add Company</h2>
+            <form id="addCompanyForm">
+                <label for="companyName">Company Name:</label>
+                <input type="text" id="companyName" required>
+                <label for="companySymbol">Company Symbol:</label>
+                <input type="text" id="companySymbol" required>
+                <label for="companyDescription">Company Description:</label>
+                <textarea id="companyDescription" required></textarea>
+                <button type="submit">Add Company</button>
+            </form>
+            
+        </aside>
+        <div>
+            <h2>Dashboard</h2>
+            <p id="totalCompanies"></p>
+            <ul id="companyList"></ul>
+            <div class="company-details">
+                <img id="companyAvatar" src="" alt="Company Avatar">
+                <p id="companyDescription"></p>
+            </div>
+            <div class="details" id="stockDetails"></div>
+            <div class="chart-container">
+                <canvas id="stockChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

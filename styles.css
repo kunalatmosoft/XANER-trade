@@ -1,0 +1,197 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+.search-container input[type="text"] {
+    padding: 8px 40px 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    transition: width 0.4s ease-in-out, background-color 0.3s, border-color 0.3s, color 0.3s;
+    width: 150px;
+    margin-right: 10px;
+}
+
+.search-container input[type="text"]:focus {
+    width: 250px;
+}
+
+.search-container button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+}
+
+#nightModeButton {
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
+aside {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.company-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.company-details img {
+    max-width: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.details {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.chart-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Company List Styles */
+#companyList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#companyList li {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#companyList li:last-child {
+    border-bottom: none;
+}
+
+#companyList li:hover {
+    background-color: #f0f0f0;
+}
+
+#companyList li.active {
+    background-color: #e0e0e0;
+}
+
+/* Night Mode Styles */
+.night-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.night-mode .container {
+    background-color: #222;
+    color: #fff;
+}
+
+.night-mode header {
+    background-color: #444;
+}
+
+.night-mode .search-container input[type="text"] {
+    background-color: #444;
+    border-color: #666;
+    color: #fff;
+}
+
+.night-mode .search-container button {
+    color: #fff;
+}
+
+.night-mode aside {
+    background-color: #444;
+}
+
+.night-mode .company-details {
+    background-color: #444;
+}
+
+.night-mode .details {
+    background-color: #444;
+}
+
+.night-mode #companyList li {
+    background-color: #444;
+    color: #fff;
+}
+
+.night-mode #companyList li.active {
+    background-color: #555;
+}
+
+.night-mode #nightModeButton {
+    color: #fff;
+}
+
+.chart-container canvas {
+    background-color: transparent !important;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        grid-gap: 20px;
+    }
+}
